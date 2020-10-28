@@ -20,3 +20,14 @@ Feature: E2E testing of Insider "Apply for Job" Process
     Then I check that correct Job Position page is opened and contains required data
     When I click on 'Apply for this Job' button on Job Position page
     Then I check Insider Application Form page is opened
+
+  Scenario: Fail Verification of blocks on Insider Career page
+    Given I open Insider Home Page
+    Then I check Insider Home page is opened
+    When I select "Career" button in navigation bar on Insider Home page
+    Then I check following blocks are displayed on Insider Career page:
+      | Culture         |
+      | Locations       |
+      | Teams           |
+      | Process         |
+      | Life at Insider |
